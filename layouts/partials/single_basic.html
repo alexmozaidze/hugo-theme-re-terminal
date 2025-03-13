@@ -1,6 +1,6 @@
 <!--
 The single_basic.html partial layout in Jekyll allows you to create custom HTML, CSS, and JavaScript
-for individual pages on your site without modifying the default layout. 
+for individual pages on your site without modifying the default layout.
 This makes it easier to maintain consistency across your site
 while still allowing you to customize individual pages as needed.
 It also allows you to reuse the same code for multiple pages,
@@ -24,7 +24,7 @@ HERE INSERT ANY CUSTOM <script/> or <style/>
   ###
   HERE INSERT ANY CUSTOM HTML
   ###
-  
+
   # Comments block
   {{ if eq .Type $.Site.Params.contentTypeName }} {{ partial
   "posts_pagination.html" . }} {{ end }} {{ if not (.Params.hideComments |
@@ -81,7 +81,7 @@ HERE INSERT ANY CUSTOM <script/> or <style/>
 <div class="post-content">
   {{- with .Content -}}
     <div>
-      {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">&#8983;</a> ${3}` | safeHTML }}
+      {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor">#</a> ${3}` | safeHTML }}
     </div>
   {{- end -}}
 </div>
