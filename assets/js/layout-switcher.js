@@ -1,10 +1,9 @@
-const layout_switcher = document.querySelector("#layout-switcher");
-layout_switcher.querySelector("button").addEventListener("click", switch_layout);
+const posts = document.querySelector(".posts");
+const layout_switcher = posts.querySelector("button.layout-switcher");
 
-
-function switch_layout() {
+layout_switcher.addEventListener("click", _ => {
 	let new_layout;
-	switch (layout_switcher.getAttribute("data-view")) {
+	switch (posts.getAttribute("data-view")) {
 		case "list":
 			new_layout = "grid";
 			break;
@@ -16,5 +15,5 @@ function switch_layout() {
 			break;
 	}
 
-	layout_switcher.setAttribute("data-view", new_layout);
-}
+	posts.setAttribute("data-view", new_layout);
+});
