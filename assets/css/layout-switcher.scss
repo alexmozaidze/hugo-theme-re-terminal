@@ -1,11 +1,30 @@
-#layout-switcher[data-view="list"] + .posts,
-#layout-switcher + .posts {
+#layout-switcher {
   display: flex;
-  flex-direction: column;
-}
+  justify-content: right;
+  align-items: last;
+  padding-top: 2rem;
+  .icon {
+    $size: 1.5rem;
+    width: $size;
+    height: $size;
+    margin-left: .4rem;
+  }
+  &[data-view="list"] .icon-grid {
+    display: none;
+  }
+  &[data-view="grid"] .icon-list {
+    display: none;
+  }
 
-#layout-switcher[data-view="grid"] + .posts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  &[data-view="list"] + .posts,
+  & + .posts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &[data-view="grid"] + .posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
 }

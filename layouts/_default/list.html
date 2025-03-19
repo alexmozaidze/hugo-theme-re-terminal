@@ -10,7 +10,15 @@
       {{ $ctx := dict
         "vendor" "lucide"
         "name" "menu"
-        "className" "current-layout-icon"
+        "className" "icon icon-list"
+        "size" "1rem"
+      }}
+      {{ partial "icons/icon" $ctx }}
+
+      {{ $ctx := dict
+        "vendor" "lucide"
+        "name" "table"
+        "className" "icon icon-grid"
         "size" "1rem"
       }}
       {{ partial "icons/icon" $ctx }}
