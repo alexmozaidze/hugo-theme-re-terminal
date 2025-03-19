@@ -4,6 +4,18 @@
       {{ . }}
     </div>
   {{ end }}
+  <div id="layout-switcher" data-view="list">
+    <button>
+      <span>Switch Layout</span>
+      {{ $ctx := dict
+        "vendor" "lucide"
+        "name" "menu"
+        "className" "current-layout-icon"
+        "size" "1rem"
+      }}
+      {{ partial "icons/icon" $ctx }}
+    </button>
+  </div>
   <div class="posts">
     {{ range .Paginator.Pages }}
       <article class="post on-list">

@@ -1,0 +1,11 @@
+#layout-switcher[data-view="list"] + .posts,
+#layout-switcher + .posts {
+  display: flex;
+  flex-direction: column;
+}
+
+#layout-switcher[data-view="grid"] + .posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
