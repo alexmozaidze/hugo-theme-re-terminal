@@ -55,9 +55,13 @@
 }
 
 .post {
-  width: 100%;
+  display: grid;
   text-align: left;
   border-bottom: 1px solid var(--border-color);
+
+  &-cover {
+    justify-self: center;
+  }
 
   &-meta {
     font-size: 1rem;
